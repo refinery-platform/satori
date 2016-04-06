@@ -18,9 +18,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     color: $gray-darker;
-    margin: 1.667rem 0 0.667rem 0;
+    margin: 2rem 0 0.5rem 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
@@ -51,6 +51,7 @@ h3 {
 }
 
 h4 {
+    margin: 1.5rem 0 0.5rem 0;
     font-size: 1.5rem;
 }
 
@@ -60,7 +61,7 @@ h5 {
 }
 
 p {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     padding: 0;
     text-align: justify;
 }
@@ -136,8 +137,20 @@ p.abstract {
     display: inline;
 }
 
+#publications h4 {
+    color: $blue;
+}
+
+#talks .date {
+    display: block;
+}
+
 #authors h4 {
     color: $blue;
+}
+
+.two-authors li:first-child:after {
+    content: ' and ';
 }
 
 /*
