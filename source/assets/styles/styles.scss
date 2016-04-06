@@ -1,0 +1,163 @@
+html,
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', 'Clear Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1;
+}
+
+body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background: $white;
+    color: $gray-dark;
+    font-size: 16px;
+    font-fammily: sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.667rem 0 0.667rem 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    line-height: 1.5;
+    transition: font-size $normal-transition $easing;
+}
+
+h1 {
+    font-size: 8rem;
+    margin: 0.33rem 0 0 0;
+    text-transform: uppercase;
+    color: $blue-dark;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h1 + h2 {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+    display: inline;
+}
+
+p {
+    margin: 1rem 0;
+    padding: 0;
+    text-align: justify;
+}
+
+a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: inherit;
+    text-decoration: none;
+    transition: all $normal-transition $easing;
+}
+
+a:hover {
+    color: $black;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(0, 0, 0, 1);
+}
+
+a:focus {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px rgba(0, 0, 0, 0.25) dotted;
+    outline: none;
+}
+
+abbr,
+abbr[title] {
+    border-bottom: 0;
+}
+
+input {
+    font-size: inherit;
+}
+
+button:active {
+    outline: none;
+}
+
+::-webkit-selection {
+    color: $white;
+    background: $red-harvard;
+}
+
+::-moz-selection {
+    color: $white;
+    background: $red-harvard;
+}
+
+::selection {
+    color: $white;
+    background: $red-harvard;
+}
+
+p.abstract {
+    text-align: justify;
+}
+
+/*
+ * -----------------------------------------------------------------------------
+ * Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+/* 568px (Pure.css Grid: SM) */
+@media screen and (min-width: 35.5em) {
+
+}
+
+/* 640px */
+@media screen and (min-width: 40em) {
+    body {
+        margin-left: 8.3334%;  /* 1/12 */
+        margin-right: 8.3334%;
+    }
+}
+
+/* 960px */
+@media screen and (min-width: 60em) {
+    body {
+        font-size: 18px;
+        margin-left: 11.1112%;  /* 1/9 */
+        margin-right: 11.1112%;
+    }
+}
+
+/* 1280px */
+@media screen and (min-width: 80em) {
+    body {
+        font-size: 20px;
+        margin-left: 16.66667%;  /* 1/6 */
+        margin-right: 16.66667%;
+    }
+}
+
+/* 1600px */
+@media screen and (min-width: 100em) {
+    body {
+        font-size: 22px;
+        margin-left: 20%;  /* 1/5 */
+        margin-right: 20%;
+    }
+}

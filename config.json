@@ -1,0 +1,46 @@
+{
+  "baseUrl": "http://localhost/Lekschas/responsive/v1",
+  "browsers": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR",
+    "Opera 12.1",
+    "Explorer >= 8",
+    "Firefox >= 3.6"
+  ],
+  "buildPaths": {
+    "development": "dev",
+    "production": "dist"
+  },
+  "files": {
+    "index": [
+      "/index.html"
+    ],
+    "js": [
+      {
+        "name": "ga.js",
+        "files": "source/assets/scripts/ga.js"
+      },
+      {
+        "name": "scripts.js",
+        "files": [
+          "source/assets/scripts/main.js"
+        ]
+      }
+    ],
+    "scss": [
+      "index.scss"
+    ]
+  },
+  "paths": {
+    "assets": "/assets",
+    "images": "/images",
+    "scripts": "/scripts",
+    "source": "source",
+    "styles": "/styles"
+  },
+  "server": {
+    "host": "localhost",
+    "port": "8001"
+  }
+}

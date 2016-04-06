@@ -1,0 +1,18 @@
+{
+  "name": "satori",
+  "version": "0.1.0",
+  "homepage": "http://satori.refinery-platform.org",
+  "description": "SATORI - A System for Ontology-Guided Visual Exploration of Biomedical Data Repositories",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purecss-sass": "^0.6.0"
+  }
+}
