@@ -10,7 +10,6 @@ body {
 }
 
 body {
-    margin: 2rem 1rem;
     background: $white;
     color: $gray-dark;
     font-size: 16px;
@@ -35,6 +34,13 @@ h1 {
     margin: 0.33rem 0 0 0;
     text-transform: uppercase;
     color: $blue;
+
+    .logo {
+        float: right;
+        width: 6rem;
+        height: 12rem;
+        color: $red;
+    }
 }
 
 h2 {
@@ -69,22 +75,23 @@ p {
 }
 
 a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     color: inherit;
     text-decoration: none;
-    transition: all $normal-transition $easing;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
+    transition: all $fast-transition $easing;
 }
 
 a:hover {
     color: $black;
-    border-bottom-width: 2px;
-    border-bottom-color: rgba(0, 0, 0, 1);
+    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 1);
 }
 
 a:focus {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px rgba(0, 0, 0, 0.25) dotted;
+    color: $red-dark;
+    background: transparentize($red, 0.9);
+    box-shadow: inset 0 0 0 1px transparentize($red, 0.95);
     outline: none;
+    border-radius: 2px;
 }
 
 abbr,
@@ -129,8 +136,54 @@ button:active {
     text-align: center;
 }
 
+svg.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    margin: 2rem 1rem;
+}
+
 .abstract {
     text-align: justify;
+}
+
+.hidden-anchor {
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+    bottom: 0;
+    width: 0.5em;
+    opacity: 0.33;
+    transform: scale(0);
+    transition: all $fast-transition $easing;
+    box-shadow: none !important;
+
+    > .icon {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+h3:hover .hidden-anchor,
+h3:target .hidden-anchor {
+    transform: scale(1);
+}
+
+.hidden-anchor:hover,
+h3:target .hidden-anchor {
+    opacity: 1;
+}
+
+h3.anchored {
+    transition: all $fast-transition $easing;
+}
+
+h3.anchored:hover,
+h3.anchored:target {
+    padding-left: 1rem;
 }
 
 .note {
@@ -170,7 +223,7 @@ h5.iconized {
         float: left
     }
 
-    .icon {
+    > .icon {
         height: 100%;
         width: 1em;
         margin-right: 0.25em;
@@ -264,8 +317,30 @@ ul.iconized {
  * -----------------------------------------------------------------------------
  */
 
-#authors h4 + p {
+#authors-list h4 + p {
     margin-top: -0.25rem;
+}
+
+#footer {
+    margin-top: 1rem;
+    padding: 2rem 0;
+    font-size: 0.85em;
+    color: $white;
+    background: $blue;
+    box-shadow: inset 0 6rem 6rem -6rem rgba(0, 0, 0, 0.66);
+
+    a {
+        box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.25);
+    }
+
+    a:hover {
+        color: $white;
+        box-shadow: inset 0 -2px 0 0 rgba(255, 255, 255, 1);
+    }
+
+    .logo {
+        color: $white;
+    }
 }
 
 #youtube {
@@ -286,6 +361,10 @@ ul.iconized {
 /* 640px */
 @media screen and (min-width: 40em) {
     body {
+
+    }
+
+    .content {
         margin-left: 8.3334%;  /* 1/12 */
         margin-right: 8.3334%;
     }
@@ -299,6 +378,9 @@ ul.iconized {
 @media screen and (min-width: 60em) {
     body {
         font-size: 18px;
+    }
+
+    .content {
         margin-left: 11.1112%;  /* 1/9 */
         margin-right: 11.1112%;
     }
@@ -312,6 +394,9 @@ ul.iconized {
 @media screen and (min-width: 80em) {
     body {
         font-size: 20px;
+    }
+
+    .content {
         margin-left: 16.66667%;  /* 1/6 */
         margin-right: 16.66667%;
     }
@@ -325,6 +410,9 @@ ul.iconized {
 @media screen and (min-width: 100em) {
     body {
         font-size: 22px;
+    }
+
+    .content {
         margin-left: 20%;  /* 1/5 */
         margin-right: 20%;
     }
