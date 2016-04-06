@@ -8,8 +8,7 @@ body {
 }
 
 body {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 2rem 1rem;
     background: $white;
     color: $gray-dark;
     font-size: 16px;
@@ -20,6 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: $gray-darker;
     margin: 1.667rem 0 0.667rem 0;
 }
 
@@ -32,7 +32,7 @@ h1 {
     font-size: 8rem;
     margin: 0.33rem 0 0 0;
     text-transform: uppercase;
-    color: $blue-dark;
+    color: $blue;
 }
 
 h2 {
@@ -40,18 +40,18 @@ h2 {
 }
 
 h1 + h2 {
+    color: $gray-dark;
     margin-top: -1rem;
     margin-bottom: 2rem;
     line-height: 1.2;
 }
 
 h3 {
-    font-size: 1.25rem;
-    font-weight: normal;
+    font-size: 2rem;
 }
 
 h4 {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
 }
 
 h5 {
@@ -99,21 +99,45 @@ button:active {
 
 ::-webkit-selection {
     color: $white;
-    background: $red-harvard;
+    background: $red;
 }
 
 ::-moz-selection {
     color: $white;
-    background: $red-harvard;
+    background: $red;
 }
 
 ::selection {
     color: $white;
-    background: $red-harvard;
+    background: $red;
+}
+
+.video {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    min-height: 315px;
+    background: $white;
 }
 
 p.abstract {
     text-align: justify;
+}
+
+.no-list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.inline-list li {
+    display: inline;
+}
+
+#authors h4 {
+    color: $blue;
 }
 
 /*
@@ -133,6 +157,10 @@ p.abstract {
         margin-left: 8.3334%;  /* 1/12 */
         margin-right: 8.3334%;
     }
+
+    .video {
+        width: 90%;
+    }
 }
 
 /* 960px */
@@ -142,6 +170,10 @@ p.abstract {
         margin-left: 11.1112%;  /* 1/9 */
         margin-right: 11.1112%;
     }
+
+    .video {
+        width: 70%;
+    }
 }
 
 /* 1280px */
@@ -150,6 +182,10 @@ p.abstract {
         font-size: 20px;
         margin-left: 16.66667%;  /* 1/6 */
         margin-right: 16.66667%;
+    }
+
+    .video {
+        width: 50%;
     }
 }
 
