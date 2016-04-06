@@ -97,6 +97,7 @@ a:focus {
 abbr,
 abbr[title] {
     border-bottom: 0;
+    text-decoration: none !important;
 }
 
 input {
@@ -281,7 +282,9 @@ ul.iconized {
     display: inline;
 }
 
-.social-links {
+// Also known as `social-links`. But anything containing `social` will be
+// removed by adblockers.
+.remix-links {
     font-size: 0.85em;
 }
 
