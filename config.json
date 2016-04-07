@@ -1,5 +1,4 @@
 {
-  "baseUrl": "http://localhost/Lekschas/responsive/v1",
   "browsers": [
     "> 1%",
     "last 2 versions",
@@ -37,7 +36,8 @@
     "images": "/images",
     "scripts": "/scripts",
     "source": "source",
-    "styles": "/styles"
+    "styles": "/styles",
+    "videos": "/videos"
   },
   "server": {
     "host": "localhost",

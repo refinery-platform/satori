@@ -80,6 +80,25 @@ gulp.task('images', function () {
     .pipe(livereload());
 });
 
+gulp.task('videos', function () {
+  var dest = production ?
+    config.buildPaths.production : config.buildPaths.development;
+
+  dest += config.paths.assets + config.paths.videos;
+
+  return gulp
+    .src(
+      config.paths.source +
+      config.paths.assets +
+      config.paths.videos +
+      '/**/*.{mp4,webm}'
+    )
+    // Only pass files that have a newer time stamp
+    .pipe(newer(dest))
+    .pipe(gulp.dest(dest))
+    .pipe(livereload());
+});
+
 gulp.task('index', function () {
   var dest = production ?
     config.buildPaths.production : config.buildPaths.development;
@@ -282,7 +301,7 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean',
     [
-      'images', 'index', 'javascript', 'sass'
+      'images', 'index', 'javascript', 'sass', 'videos'
     ],
     callback);
 });
