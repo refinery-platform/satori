@@ -31,21 +31,21 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0.33rem 0 0 0;
     text-transform: uppercase;
     color: transparentize($blue, 0.075);
 
     .logo {
         float: right;
-        width: 4rem;
-        height: 6rem;
+        width: 2.5rem;
+        height: 4.5rem;
         color: transparentize($red, 0.1);
     }
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
 }
 
 h1 + h2 {
@@ -585,6 +585,22 @@ ul.iconized {
  * Media Queries
  * -----------------------------------------------------------------------------
  */
+
+/* 400px */
+@media screen and (min-width: 20em) {
+    h1 {
+        font-size: 4rem;
+
+        .logo {
+            width: 3rem;
+            height: 6rem;
+        }
+    }
+
+    h1 + h2 {
+        font-size: 2rem;
+    }
+}
 
 /* 568px (Pure.css Grid: SM) */
 @media screen and (min-width: 35.5em) {
