@@ -32,14 +32,15 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 h1 {
     font-size: 3rem;
-    margin: 0.33rem 0 0 0;
+    margin: 0;
     text-transform: uppercase;
     color: transparentize($blue, 0.075);
+    line-height: 1;
 
     .logo {
         float: right;
         width: 2.5rem;
-        height: 4.5rem;
+        height: 3rem;
         color: transparentize($red, 0.1);
     }
 }
@@ -627,9 +628,10 @@ ul.iconized {
  */
 
 /* 400px */
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 25em) {
     h1 {
         font-size: 4rem;
+        line-height: 1.5;
 
         .logo {
             width: 3rem;
