@@ -167,6 +167,17 @@ button:active {
     animation-duration: 10s;
 }
 
+body.mobile .fullscreen .bg {
+  opacity: 0.33 !important;
+  background: url('../images/satori-short-first-frame.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  animation-name: slowOpacityIncrease;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 10s;
+}
+
 .fullscreen.more-opaque .bg {
     opacity: 0.9;
 }
@@ -196,7 +207,32 @@ button:active {
     }
 }
 
-.fullscreen .bg-video {
+@-moz-keyframes slowOpacityIncrease {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.33;
+    }
+}
+@-webkit-keyframes slowOpacityIncrease {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.33;
+    }
+}
+@keyframes slowOpacityIncrease {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.33;
+    }
+}
+
+.fullscreen video.bg-video {
     z-index: 1;
 }
 
@@ -215,6 +251,10 @@ video.bg-video {
     transform: translateX(-50%) translateY(-50%);
     background: url('../images/satori-short-first-frame.jpg') no-repeat;
     background-size: cover;
+}
+
+body.mobile video.bg-video {
+  display: none;
 }
 
 .fullscreen-blocker {
