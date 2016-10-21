@@ -33,6 +33,7 @@
   },
   "paths": {
     "assets": "/assets",
+    "docs": "/docs",
     "images": "/images",
     "scripts": "/scripts",
     "source": "source",
