@@ -408,14 +408,17 @@ svg.centered {
 
 .hidden-anchor {
     position: absolute;
+    display: block;
     top: 0;
-    left: -0.5rem;
+    left: -2rem;
     bottom: 0;
     width: 0.5em;
+    padding: 0 1.5rem 0 0.25rem;
     opacity: 0.33;
     transform: scale(0);
     transition: all $fast-transition $easing;
     box-shadow: none !important;
+    cursor: pointer;
 
     > .icon {
         height: 100%;
@@ -433,13 +436,34 @@ h3:target .hidden-anchor {
     opacity: 1;
 }
 
-h3.anchored {
-    transition: all $fast-transition $easing;
+h3:target  {
+    color: $black;
+    background: transparentize($red, 0.9);
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: -2rem;
+        width: 2rem;
+        background: transparentize($red, 0.9);
+    }
+
+    &.underlined:after {
+        left: -2rem;
+        background: $red;
+    }
+
+    .hidden-anchor {
+        padding-right: 0.25rem;
+        color: $white;
+        background: $red;
+    }
 }
 
-h3.anchored:hover,
-h3.anchored:target {
-    padding-left: 1rem;
+h3.anchored {
+    transition: all $fast-transition $easing;
 }
 
 .note {
@@ -451,6 +475,31 @@ h3.anchored:target {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+ul.medium-spacing li,
+ol.medium-spacing li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+ul.large-spacing li,
+ol.large-spacing li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+ul.medium-spacing li,
+ul.large-spacing li,
+ol.medium-spacing li,
+ol.large-spacing li {
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .underlined {
@@ -465,6 +514,17 @@ h3.anchored:target {
         right: -1rem;
         height: 2px;
         background: $gray-lighter;
+        transition: left $fast-transition $easing;
+    }
+}
+
+h1.underlined:hover,
+h2.underlined:hover,
+h3.underlined:hover,
+h4.underlined:hover,
+h5.underlined:hover {
+    &:after {
+        left: -2rem;
     }
 }
 
@@ -549,6 +609,7 @@ ul.iconized {
 
 .date {
     display: block;
+    color: $gray-medium;
 }
 
 .two-authors li:first-child:after {
@@ -688,7 +749,7 @@ ul.iconized {
 /* 960px */
 @media screen and (min-width: 60em) {
     body {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     h1 {
@@ -717,7 +778,7 @@ ul.iconized {
 /* 1280px */
 @media screen and (min-width: 80em) {
     body {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .content {
@@ -733,7 +794,11 @@ ul.iconized {
 /* 1600px */
 @media screen and (min-width: 100em) {
     body {
-        font-size: 22px;
+        font-size: 24px;
+    }
+
+    .abstract {
+        font-size: 28px;
     }
 
     .content {
