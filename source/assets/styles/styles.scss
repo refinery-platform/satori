@@ -777,6 +777,14 @@ ul.iconized {
     .video {
         width: 80%;
     }
+
+    .pointer {
+        font-size: 30px;
+    }
+
+    .pointer-wrapper {
+        top: -3.85rem;
+    }
 }
 
 /* 1280px */
@@ -793,6 +801,14 @@ ul.iconized {
     .video {
         width: 70%;
     }
+
+    .pointer {
+        font-size: 36px;
+    }
+
+    .pointer-wrapper {
+        top: -4.25rem;
+    }
 }
 
 /* 1600px */
@@ -808,5 +824,13 @@ ul.iconized {
     .content {
         margin-left: 20%;  /* 1/5 */
         margin-right: 20%;
+    }
+
+    .pointer {
+        font-size: 48px;
+    }
+
+    .pointer-wrapper {
+        top: -5rem;
     }
 }
