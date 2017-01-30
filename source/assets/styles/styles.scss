@@ -38,10 +38,12 @@ h1 {
     line-height: 1;
 
     .logo {
-        float: right;
+        float: left;
         width: 2.5rem;
         height: 3rem;
-        color: transparentize($red, 0.1);
+        padding-right: 0.5rem;
+        // color: transparentize($red, 0.1);
+        color: transparentize(lighten(desaturate($blue, 33%), 50%), 0.1);
     }
 }
 
@@ -506,6 +508,10 @@ ol.large-spacing li {
     }
 }
 
+.smaller {
+    font-size: 0.85em;
+}
+
 .underlined {
     position: relative;
 
@@ -613,6 +619,7 @@ ul.iconized {
 
 .date {
     display: block;
+    font-size: 0.85em;
     color: $gray-medium;
 }
 
@@ -636,6 +643,89 @@ ul.iconized {
 
 .reference .secondary-information {
     font-size: 0.85em;
+}
+
+.btn {
+    display: block;
+    padding: 0.25em 0.75em;
+    border: 0;
+    border-radius: 0.25em;
+    color: $white;
+    background: $blue;
+    box-shadow: none;
+
+    &:hover {
+        color: $white;
+        background: saturate($blue, 30%);
+        box-shadow: none;
+    }
+
+    &:active,
+    &:focus {
+        color: $white;
+        border-radius: 0.25em;
+        background: darken($blue, 10%);
+        box-shadow: none;
+    }
+}
+
+.btn-primary {
+    background: $red;
+
+    &:hover {
+        background: saturate($red, 30%);
+    }
+
+    &:active,
+    &:focus {
+        color: $white;
+        border-radius: 0.25em;
+        background: darken($red, 10%);
+    }
+}
+
+.btn-big {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.ribbon-wrapper {
+    width: 8em;
+    height: 8em;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.ribbon {
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform:    rotate(45deg);
+    -ms-transform:     rotate(45deg);
+    -o-transform:      rotate(45deg);
+    position: relative;
+    padding: 0.375em 0;
+    left: 0.25em;
+    top: 1.75em;
+    width: 10em;
+    background-color: transparentize($red, 0.05);
+    color: $white;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+
+    a {
+        box-shadow: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $white;
+            box-shadow: inset 0 -1px 0 0 $white;
+        }
+    }
 }
 
 /*
@@ -715,7 +805,7 @@ ul.iconized {
         font-size: 6rem;
 
         .logo {
-            width: 6rem;
+            width: 4.5rem;
             height: 9rem;
         }
     }
@@ -731,8 +821,9 @@ ul.iconized {
         font-size: 7rem;
 
         .logo {
-            width: 6rem;
+            width: 5rem;
             height: 10.5rem;
+            padding-right: 1rem;
         }
     }
 
@@ -760,8 +851,9 @@ ul.iconized {
         font-size: 9rem;
 
         .logo {
-            width: 7rem;
+            width: 6rem;
             height: 13.5rem;
+            margin-left: -7rem;
         }
     }
 
@@ -791,6 +883,14 @@ ul.iconized {
 @media screen and (min-width: 80em) {
     body {
         font-size: 22px;
+    }
+
+    h1 {
+        .logo {
+            width: 7rem;
+            height: 13.5rem;
+            margin-left: -8rem;
+        }
     }
 
     .content {
