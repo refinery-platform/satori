@@ -135,15 +135,29 @@ figcaption {
     font-size: 0.85em;
 }
 
+section.text {
+    position: relative;
+    overflow: auto;
+
+    .block {
+        position: relative;
+    }
+
+    figure {
+        margin: 0.25em 2em;
+        padding: 0;
+
+        figcaption {
+            margin-top: 1em;
+        }
+    }
+}
+
 /*
  * -----------------------------------------------------------------------------
  * General styles, i.e. classes
  * -----------------------------------------------------------------------------
  */
-
-.m-l-1-2 {
-    margin-left: 0.5rem;
-}
 
 .larger {
     font-size: 1.125em;
@@ -767,6 +781,45 @@ ul.iconized {
     @include ratio(2520, 1324);
     background: url(../images/teaser.png) no-repeat center center;
     background-size: cover;
+}
+
+#fig-user-roles {
+    @include ratio(800, 202);
+
+    float: right;
+    background: url(../images/user-roles.png) no-repeat top center;
+    background-size: contain;
+}
+
+#fig-overview {
+    @include ratio(800, 620);
+
+    float: right;
+    padding: 0.5em;
+    background: url(../images/overview.png) no-repeat top center;
+    background-size: contain;
+}
+
+#fig-ontology {
+    @include ratio(800, 395);
+
+    background: url(../images/ontology.png) no-repeat top center;
+    background-size: contain;
+}
+
+#fig-precision-recall {
+    @include ratio(800, 319);
+
+    background: url(../images/precision-recall.png) no-repeat top center;
+    background-size: contain;
+}
+
+#fig-link-indication {
+    @include ratio(336, 800);
+
+    float: right;
+    background: url(../images/link-indication.png) no-repeat top center;
+    background-size: contain;
 }
 
 #authors-list h4 + p {
