@@ -572,6 +572,19 @@ h5.iconized {
     height: 1.25rem;
 }
 
+h2 sup, h3 sup, h4 sup, h5 sup {
+    text-transform: uppercase;
+}
+
+h3 sup {
+    margin-left: 0.125em;
+    padding: 0 0.25em;
+    color: $blue;
+    font-size: 0.6em;
+    border-radius: 0.25em;
+    background: transparentize(lighten($blue, 20%), 0.66);
+}
+
 
 ol.iconized,
 ul.iconized {
@@ -690,8 +703,8 @@ ul.iconized {
 }
 
 .ribbon-wrapper {
-    width: 8em;
-    height: 8em;
+    width: 8.5em;
+    height: 8.5em;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -708,9 +721,9 @@ ul.iconized {
     -ms-transform:     rotate(45deg);
     -o-transform:      rotate(45deg);
     position: relative;
-    padding: 0.375em 0;
-    left: 0.25em;
-    top: 1.75em;
+    padding: 0.375em 1em;
+    left: -1em;
+    top: 2.5em;
     width: 10em;
     background-color: transparentize($red, 0.05);
     color: $white;
@@ -769,6 +782,11 @@ ul.iconized {
     .logo-dbmi {
         width: 8.25em; /* 3.3 (w) : 1 (h) */
         height: 2.5em;
+    }
+
+    .copyright {
+        color: transparentize($white, 0.5);
+        font-size: 0.85em;
     }
 }
 
