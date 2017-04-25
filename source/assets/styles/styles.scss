@@ -139,8 +139,12 @@ section.text {
     position: relative;
     overflow: auto;
 
-    .block {
-        position: relative;
+    p {
+        margin: 1.5em 0;
+
+        &.first {
+            margin-top: 0;
+        }
     }
 
     figure {
@@ -787,6 +791,7 @@ ul.iconized {
     @include ratio(800, 202);
 
     float: right;
+    margin-right: 0;
     background: url(../images/user-roles.png) no-repeat top center;
     background-size: contain;
 }
@@ -794,7 +799,8 @@ ul.iconized {
 #fig-overview {
     @include ratio(800, 620);
 
-    float: right;
+    float: left;
+    margin-left: 0;
     padding: 0.5em;
     background: url(../images/overview.png) no-repeat top center;
     background-size: contain;
@@ -818,6 +824,7 @@ ul.iconized {
     @include ratio(336, 800);
 
     float: right;
+    margin-right: 0;
     background: url(../images/link-indication.png) no-repeat top center;
     background-size: contain;
 }
