@@ -131,6 +131,10 @@ button:active {
     background: $red;
 }
 
+figcaption {
+    font-size: 0.85em;
+}
+
 /*
  * -----------------------------------------------------------------------------
  * General styles, i.e. classes
@@ -139,6 +143,14 @@ button:active {
 
 .m-l-1-2 {
     margin-left: 0.5rem;
+}
+
+.larger {
+    font-size: 1.125em;
+}
+
+.darker {
+    color: $gray-darker;
 }
 
 .fullscreen {
@@ -579,10 +591,10 @@ h2 sup, h3 sup, h4 sup, h5 sup {
 h3 sup {
     margin-left: 0.125em;
     padding: 0 0.25em;
-    color: $blue;
+    color: darken($yellow, 25%);
     font-size: 0.6em;
     border-radius: 0.25em;
-    background: transparentize(lighten($blue, 20%), 0.66);
+    background: transparentize(lighten($yellow, 10%), 0.5);
 }
 
 
@@ -618,6 +630,10 @@ ul.iconized {
     height: 0.8em;
     line-height: 1.5em;
     vertical-align: center;
+}
+
+.icon-new {
+    color: $yellow;
 }
 
 .inline-list li {
@@ -746,6 +762,12 @@ ul.iconized {
  * Specific styles, i.e. IDs
  * -----------------------------------------------------------------------------
  */
+
+#fig-teaser {
+    @include ratio(2520, 1324);
+    background: url(../images/teaser.png) no-repeat center center;
+    background-size: cover;
+}
 
 #authors-list h4 + p {
     margin-top: -0.25rem;
