@@ -52,7 +52,7 @@
     "uglify-js": "2.7.3"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp build --production",
     "start": "gulp --open"
   }
 }
