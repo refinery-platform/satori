@@ -291,7 +291,7 @@ video.bg-video {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url('../images/satori-short-first-frame.jpg') no-repeat;
+    background: url('../images/satori-short-first-frame.png') no-repeat;
     background-size: cover;
 }
 
@@ -878,7 +878,7 @@ ul.iconized {
 }
 
 #youtube {
-    @include ratio(560, 310);
+    @include ratio(3360, 2100);
 }
 
 /*
