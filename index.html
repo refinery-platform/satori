@@ -36,7 +36,7 @@
     <div class="ribbon-wrapper">
       <div class="ribbon">
         <a href="http://satori.cloud.refinery-platform.org" target="_blank">
-          Live Demo v1.5
+          Live Demo
         </a>
       </div>
     </div>​
@@ -69,25 +69,6 @@
 
       <p class="abstract larger m-b-2"><abbr title="Semantic Annotation Tool and Ontological Relations Interface">SATORI</abbr> is an ontology-guided visual exploration system for data repositories, which combines powerful metadata search with a treemap and a node-link diagram that visualize the repository structure, provide context to retrieved data sets, and serve as an interface to drive semantic querying and exploration, and thereby support the information foraging loop. <abbr title="Semantic Annotation Tool and Ontological Relations Interface">SATORI</abbr> is web-based, open-source, and integrated in the <a href="http://refinery-platform.org" target="_blank"><svg class="icon-inline m-r-0-25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#refinery"></use></svg>Refinery Platform</a> &ndash; an application for biomedical data management, analysis, and visualization.</p>
 
-
-
-      <h3 id="version-1-5" class="iconized underlined anchored">
-        <a href="#version-1-5" class="hidden-anchor">
-          <svg class="icon">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="assets/images/icons.svg#link"></use>
-          </svg>
-        </a>
-        <svg class="icon icon-new">
-          <use
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="assets/images/icons.svg#new"></use>
-        </svg>
-        <span>Version 1.5</span>
-        <sup>New</sup>
-      </h3>
-      <p class="abstract">Version 1.5 features a central query interface for handling selected ontology terms. Also support for minimizing or maximizing one of the two visualizations is added. The node context menu of the node-link diagram now shows the OntID and URI. Finally, each main components features an interactive introduction to alleviate the learning curve.</p>
       <a
         href="http://satori.cloud.refinery-platform.org"
         target="_blank"
@@ -121,55 +102,12 @@
         </iframe>
       </div>
 
-
-
-      <h3 id="introduction" class="iconized underlined anchored">
-        <a href="#introduction" class="hidden-anchor">
-          <svg class="icon">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="assets/images/icons.svg#link"></use>
-          </svg>
-        </a>
-        <svg class="icon icon-small">
-          <use
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="assets/images/icons.svg#text"></use>
-        </svg>
-        <span>Introduction</span>
-      </h3>
-
-      <section class="text">
-        <figure id="fig-user-roles">
-          <figcaption>Fig. 1: Exploration behavior of different user roles.</figcaption>
-        </figure>
-
-        <p class="abstract first">
-          <strong>Why?</strong>  Biomedical repositories are growing rapidly and provide scientists with tremendous opportunities to re-use data. In order to exploit published data sets efficiently, it is crucial to understand the content of repositories and to discover data relevant to a question of interest. These are challenging tasks, as most repositories currently only support finding data sets through text-based search of metadata and in some cases also through metadata-based browsing. To address this, we conducted a task analysis through semi-structured interviews with 8 PhD-level domain experts and identified 3 distinct user roles (<a href="#fig-user-roles">Fig. 1</a>).
-        </p>
-
-        <figure id="fig-overview">
-          <figcaption>Fig. 2: <abbr title="Semantic Annotation Tool and Ontological Relations Interface">SATORI</abbr>'s system and data model.</figcaption>
-        </figure>
-
-        <p class="abstract"><strong>What?</strong>  Biological data sets consists of experimental data and metadata describing the studies, properties of the analyzed biological samples, and attributes of individual data files. In this context, a data set is a collection of data files, along with the metadata  (<a href="#fig-overview">Fig. 2</a>). Additionally, metadata is partially annotated with ontology terms. An ontology describes a certain domain (e.g. <em>human anatomy</em>), defines controlled vocabularies for its concepts and relationships (e.g., <em>kidney</em> and <em>is-part-of</em>) and relates concepts with each other (e.g., <em>nephron is-part-of kidney</em>). By means of ontology terms, sets of annotated data sets can be classified hierarchically. <abbr title="Semantic Annotation Tool and Ontological Relations Interface">SATORI</abbr> extracts free-text and ontologically annotated metadata  (<a href="#fig-overview">Fig. 2</a>). The free-text metadata is indexed in a text-based search system. Additionally, data set-related ontology classes are parsed and visualized to provide semantic context to data sets. Since <abbr title="Semantic Annotation Tool and Ontological Relations Interface">SATORI</abbr>'s goal is to support exploration rather than to visualize ontologies themselves, only a relevant subtree of the ontologies is shown, i.e., effectively enforcing a strict containment hierarchy (<a href="#fig-ontology">Fig. 3</a>).</p>
-
-        <div class="flex-c m-t-2 m-b-2">
-          <figure id="fig-ontology" class="flex-g-1">
-            <figcaption>Fig. 3: Ontology pruning.</figcaption>
-          </figure>
-
-          <figure id="fig-precision-recall" class="flex-g-1">
-            <figcaption>Fig. 4: Precision and recall.</figcaption>
-          </figure>
-        </div>
-
-        <figure id="fig-link-indication">
-          <figcaption>Fig. 5: Link location.</figcaption>
-        </figure>
-
-        <p class="abstract"><strong>How?</strong>  <abbr title="Semantic Annotation Tool and Ontological Relations Interface">SATORI</abbr> is composed of two main interlinked views: the data set view and the exploration view. In the treemap an ontology term is illustrated by a rectangle. The area of the rectangle visualizes the size of the term relative to its sibling terms and the color indicates the distance to the farthest child term. The farther away this child term is, the darker is the color. The node-link diagram represents ontology terms as nodes and links shown parent and child terms (<a href="#fig-link-indication">Fig. 5</a>). Additionally, the diagram visualizes the precision and recall (<a href="#fig-precision-recall">Fig. 4</a>) for each term given the currently retrieved data sets. In this context, precision is useful to understand how frequently a term is used for annotation in the retrieved set of data sets and recall provides a notion of information scent by indicating if there are more data sets annotated with this term. Finally, the exploration view acts as a semantic query interface and lets users filter down collections of data sets via ontology term-based Boolean queries.</p>
-      </section>
+      <a
+        href="http://satori.lekschas.de"
+        target="_blank"
+        class="btn btn-big centered m-t-1 video">
+        More Information
+      </a>
 
       <h3 id="publications" class="iconized underlined anchored">
         <a href="#publications" class="hidden-anchor">
@@ -196,139 +134,6 @@
             </ol>
             <span class="journal">Bioinformatics</span>, btx739, 2017,
             <span class="doi"><abbr title="Digital Object Identifier">doi</abbr>: <a href="https://doi.org/10.1093/bioinformatics/btx739" target="_blank">10.1093/bioinformatics/btx739</a></span>
-          </div>
-        </li>
-      </ol>
-
-      <h3 id="talks" class="iconized underlined anchored">
-        <a href="#talks" class="hidden-anchor">
-          <svg class="icon">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="assets/images/icons.svg#link"></use>
-          </svg>
-        </a>
-        <svg class="icon">
-          <use
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="assets/images/icons.svg#presentation"></use>
-        </svg>
-        Presentations
-      </h3>
-      <ol id="talks" class="no-list-style large-spacing">
-        <li>
-          Visual Exploration of Biomedical Data: from Small to Big, and Back Again
-          <div class="date smaller">
-            <svg class="icon icon-inline">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#calendar"></use>
-            </svg>
-            Oct 24, 2017
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#location"></use>
-            </svg>
-            Novartis
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#presentation"></use>
-            </svg>
-            Talk
-          </div>
-        </li>
-        <li>
-          To be FAIR, we should give Ontologies and Data Visualization a try
-          <div class="date smaller">
-            <svg class="icon icon-inline">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#calendar"></use>
-            </svg>
-            Jun 2017
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#location"></use>
-            </svg>
-            ISMB/ECCB, Prague
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#presentation"></use>
-            </svg>
-            Talk
-          </div>
-        </li>
-        <li>
-          <a href="assets/docs/poster_ieee_vis_2016.pdf" target="_blank">SATORI: A System for Ontology-Guided Visual Exploration of Biomedical Data Repositories</a>
-          <div class="date smaller">
-            <svg class="icon icon-inline">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#calendar"></use>
-            </svg>
-            Oct 26, 2016
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#location"></use>
-            </svg>
-            IEEE VIS
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#presentation"></use>
-            </svg>
-            Poster
-          </div>
-        </li>
-        <li>
-          <a href="https://speakerdeck.com/flekschas/satori-a-system-for-ontology-guided-visual-exploration-of-biomedical-data-repositories" target="_blank">SATORI: A System for Ontology-Guided Visual Exploration of Biomedical Data Repositories</a>
-          <div class="date">
-            <svg class="icon icon-inline">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#calendar"></use>
-            </svg>
-            Apr 15, 2016
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#location"></use>
-            </svg>
-            Department of Biomedical Informatics, Harvard Medical School
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#presentation"></use>
-            </svg>
-            Master Thesis Presentation
-          </div>
-        </li>
-        <li>
-          <a href="http://www.slideshare.net/ngehlenborg/approaches-for-the-integration-of-visual-and-computational-analysis-of-biomedical-data" target="_blank">Approaches for the Integration of Visual and Computational Analysis of Biomedical Data</a>
-          <div class="date">
-            <svg class="icon icon-inline">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#calendar"></use>
-            </svg>
-            Apr 6, 2016
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#location"></use>
-            </svg>
-            BioIT-World
-            <svg class="icon icon-inline m-l-1-2">
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="assets/images/icons.svg#presentation"></use>
-            </svg>
-            Talk
           </div>
         </li>
       </ol>
